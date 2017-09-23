@@ -11,7 +11,7 @@ namespace FirstConsoleProgram
         static void Main(string[] args)
         {
             printWelcomeMessage();
-            int a = readIntegerFromConsole();
+            int a = readIntegerFromConsole();// call the function and store the return value to a
             int b = readIntegerFromConsole();
             int c = readIntegerFromConsole();
             int d = readIntegerFromConsole();
@@ -24,10 +24,10 @@ namespace FirstConsoleProgram
         static int readIntegerFromConsole()
         {
             int x;
-            Console.WriteLine("Enter a number!");
-            String xyz = Console.ReadLine();
+            Console.WriteLine("Enter a number!");// write the line in the console
+            String xyz = Console.ReadLine();// Read the line from console and store it to xyz
             Int32.TryParse(xyz, out x); //Convert the string xyz to the integer x
-            return x;
+            return x; // return the value x to the caller
         }
 
         static void printWelcomeMessage()
