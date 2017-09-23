@@ -31,6 +31,9 @@ namespace FirstConsoleProgram
                 Console.WriteLine("Enter a number instead of a string!");// write the line in the console
                 xyz = Console.ReadLine();
                 Int32.TryParse(xyz, out x);
+                if (x == 0) {
+                    Console.WriteLine("Skipping this string..!");// write the line in the console
+                }
             } 
             return x; // return the value x to the caller
         }
