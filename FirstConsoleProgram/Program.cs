@@ -10,32 +10,24 @@ namespace FirstConsoleProgram
     {
         static void Main(string[] args)
         {
-            String xyz;
             printWelcomeMessage();
-
-            int a;
-            Console.WriteLine("Enter a number!");
-            xyz = Console.ReadLine();
-            Int32.TryParse(xyz, out a); //Convert the string xyz to the integer a
-            
-            int b;
-            Console.WriteLine("Enter a number!");
-            xyz = Console.ReadLine();
-            Int32.TryParse(xyz, out b); //Convert the string xyz to the integer b
-
-            int c;
-            Console.WriteLine("Enter a number!");
-            xyz = Console.ReadLine();
-            Int32.TryParse(xyz, out c); //Convert the string xyz to the integer c
-            
-            int d;
-            Console.WriteLine("Enter a number!");
-            xyz = Console.ReadLine();
-            Int32.TryParse(xyz, out d); //Convert the string xyz to the integer d
-
+            int a = readIntegerFromConsole();
+            int b = readIntegerFromConsole();
+            int c = readIntegerFromConsole();
+            int d = readIntegerFromConsole();
+          
             Console.WriteLine("The result is ");
             Console.WriteLine(a + b + c + d);
             Console.ReadKey();
+        }
+
+        static int readIntegerFromConsole()
+        {
+            int x;
+            Console.WriteLine("Enter a number!");
+            String xyz = Console.ReadLine();
+            Int32.TryParse(xyz, out x); //Convert the string xyz to the integer x
+            return x;
         }
 
         static void printWelcomeMessage()
