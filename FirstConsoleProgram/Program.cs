@@ -26,15 +26,18 @@ namespace FirstConsoleProgram
             int x;
             Console.WriteLine("Enter a number!");// write the line in the console
             String xyz = Console.ReadLine();// Read the line from console and store it to xyz
+           
             Int32.TryParse(xyz, out x); //Convert the string xyz to the integer x
             if (x == 0){
                 Console.WriteLine("Enter a number instead of a string!");// write the line in the console
                 xyz = Console.ReadLine();
                 Int32.TryParse(xyz, out x);
-                if (x == 0) {
-                    Console.WriteLine("Skipping this string..!");// write the line in the console
-                }
-            } 
+
+            }
+            else
+            {
+                Console.WriteLine("Thank you");
+            }
             return x; // return the value x to the caller
         }
 
