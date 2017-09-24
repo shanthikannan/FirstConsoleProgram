@@ -11,13 +11,16 @@ namespace FirstConsoleProgram
         static void Main(string[] args)
         {
             printWelcomeMessage();
-            int a = readIntegerFromConsole();// call the function and store the return value to a
-            int b = readIntegerFromConsole();
-            int c = readIntegerFromConsole();
-            int d = readIntegerFromConsole();
-          
+            int result = 0;
+            int counter = 0;
+            while (counter < 4) {
+                int a = readIntegerFromConsole(); // call the function and store the return value to a
+                result = result + a;
+                counter = counter + 1;
+            }
+            
             Console.WriteLine("The result is ");
-            Console.WriteLine(a + b + c + d);
+            Console.WriteLine(result);
             Console.ReadKey();
         }
 
@@ -28,16 +31,16 @@ namespace FirstConsoleProgram
             String xyz = Console.ReadLine();// Read the line from console and store it to xyz
            
             Int32.TryParse(xyz, out x); //Convert the string xyz to the integer x
-            if (x == 0){
+           /* if (x == 0){
                 Console.WriteLine("Enter a number instead of a string!");// write the line in the console
                 xyz = Console.ReadLine();
                 Int32.TryParse(xyz, out x);
-
             }
             else
             {
                 Console.WriteLine("Thank you");
             }
+            */
             return x; // return the value x to the caller
         }
 
