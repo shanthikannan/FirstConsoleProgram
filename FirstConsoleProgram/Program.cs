@@ -13,10 +13,10 @@ namespace FirstConsoleProgram
             printWelcomeMessage();
             int result = 0;
             int counter = 0;
-            while (counter < 4) {
+            while (counter < 4) { // for (int counter = 0; counter < 4 ; counter++) {
                 int a = readIntegerFromConsole(); // call the function and store the return value to a
-                result = result + a;
-                counter = counter + 1;
+                result = result + a;// result += a;
+                counter = counter + 1; // counter += 1; // counter++; ++counter;
             }
             
             Console.WriteLine("The result is ");
