@@ -13,16 +13,25 @@ namespace FirstConsoleProgram
             printWelcomeMessage();
             int result = 0;
             int counter = 0;
+            int[] a = new int[4];
+
             do
             {
-                int a = readIntegerFromConsole(); // call the function and store the return value to a
-                result = result + a;// result += a
+                a[counter] = readIntegerFromConsole(); // call the function and store the return value to a
                 counter = counter + 1;
             } while (counter < 4);
-           
 
-                Console.WriteLine("The result is ");
+
+            Console.WriteLine("Here is your result");
+            for (       counter = 0; counter < 4; counter++)
+            {
+                result = result + a[counter];// result += a
+                Console.WriteLine(a[counter] + " + ");
+            }
+            Console.WriteLine("------");
             Console.WriteLine(result);
+            Console.WriteLine("------");
+
             Console.ReadKey();
         }
 
