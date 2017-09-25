@@ -12,12 +12,22 @@ namespace FirstConsoleProgram
         {
             printWelcomeMessage();
             int result = 0;
-         
-            for (int counter = 0; counter < 4 ; counter++)
+            while (true)
             {
                 int a = readIntegerFromConsole(); // call the function and store the return value to a
-                result = result + a;// result += a;
+                result = result + a;
+                if (result >= 100)
+                {
+                    break;
+                }
             }
+
+
+            //for (int counter = 0; counter < 4 ; counter++)
+            //{
+            //    int a = readIntegerFromConsole(); // call the function and store the return value to a
+            //    result = result + a;// result += a;
+            //}
             
             Console.WriteLine("The result is ");
             Console.WriteLine(result);
