@@ -10,23 +10,28 @@ namespace FirstConsoleProgram
     {
         static void Main(string[] args)
         {
+            const int SIZE = 4;
             printWelcomeMessage();
+
             int result = 0;
             int counter = 0;
-            int[] a = new int[4];
+            int[] a = new int[SIZE];
 
             do
             {
                 a[counter] = readIntegerFromConsole(); // call the function and store the return value to a
                 counter = counter + 1;
-            } while (counter < 4);
+            } while (counter < a.Length);
 
 
             Console.WriteLine("Here is your result");
-            for (       counter = 0; counter < 4; counter++)
+            foreach(int element in a)
+            //for (counter = 0; counter < a.Length; counter++)
             {
-                result = result + a[counter];// result += a
-                Console.WriteLine(a[counter] + " + ");
+                result = result + element;
+                //result = result + a[counter];// result += a
+                Console.WriteLine(element + " + ");
+                //Console.WriteLine(a[counter] + " + ");
             }
             Console.WriteLine("------");
             Console.WriteLine(result);
