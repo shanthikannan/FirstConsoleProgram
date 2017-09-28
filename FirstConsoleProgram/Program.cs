@@ -10,19 +10,34 @@ namespace FirstConsoleProgram
     {
         public string firstName;
         public string lastName;
-        public int age;
+        public string FullName
+        {
+            get
+            {
+                return firstName + " " + lastName;
+            }
+            set
+            {
+                lastName = value;
+            }
+        }
+
+        public int age { get; set; }
         private int points = 0;
 
         public Person()
         {
-            firstName = "FIRST NAME";
-            Console.WriteLine($"{firstName} is Created");
+            firstName = "FN";
+            lastName = "LN";
+
+            Console.WriteLine($"{firstName} {lastName} is Created");
         }
 
-        public Person(string name)
+        public Person(string fn, string ln)
         {
-            firstName = name;
-            Console.WriteLine($"{name} is Created");
+            firstName = fn;
+            lastName = ln;
+            Console.WriteLine($"{fn} {ln} is Created");
         }
 
         public void addPoint()
@@ -41,7 +56,18 @@ namespace FirstConsoleProgram
         static void Main(string[] args)
         {
             Person shan = new Person();
-            Person kannan = new Person("kannan");
+            Person kannan = new Person("kannan", "loganathan");
+
+            shan.FullName = "Shanthi Kannan";
+            Console.WriteLine($"Shanthi's First Name: {shan.firstName}");
+            Console.WriteLine($"Shanthi's Last Name: {shan.lastName}");
+            Console.WriteLine($"Shanthi's Full Name: {shan.FullName}");
+
+            kannan.FullName = "Kamachi Sundaram";
+            Console.WriteLine($"Kannan's First Name: {kannan.firstName}");
+            Console.WriteLine($"Kannan's Last Name: {kannan.lastName}");
+            Console.WriteLine($"Kannan's Full Name: {kannan.FullName}");
+
             String xyz;
             do
             {
