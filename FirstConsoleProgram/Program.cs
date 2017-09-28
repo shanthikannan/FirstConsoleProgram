@@ -6,24 +6,42 @@ using System.Threading.Tasks;
 
 namespace FirstConsoleProgram
 {
+    class Person
+    {
+        public string firstName;
+        public string lastName;
+        public int age;
+        private int points = 0;
+
+        public Person()
+        {
+            firstName = "FIRST NAME";
+            Console.WriteLine($"{firstName} is Created");
+        }
+
+        public Person(string name)
+        {
+            firstName = name;
+            Console.WriteLine($"{name} is Created");
+        }
+
+        public void addPoint()
+        {
+            points++;
+        }
+
+        public int getPoints()
+        {
+            return points;
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
             Person shan = new Person();
-            shan.firstName = "Shathi";
-            shan.lastName = "K";
-            shan.age = 37;
-            shan.sex = Sex.FEMALE;
-
-            Person kannan = new Person();
-            kannan.firstName = "Kannan";
-            kannan.lastName = "l";
-            kannan.age = 39;
-            kannan.sex = Sex.MALE;
-
-            Person deekshu = new Person();
-
+            Person kannan = new Person("kannan");
             String xyz;
             do
             {
