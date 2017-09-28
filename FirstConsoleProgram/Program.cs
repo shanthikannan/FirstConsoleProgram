@@ -1,56 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestNameSpace
-{
-    class Person
-    {
-        public string firstName;
-        public string lastName;
-        public string FullName
-        {
-            get
-            {
-                return firstName + " " + lastName;
-            }
-            set
-            {
-                lastName = value;
-            }
-        }
-
-        public int age { get; set; }
-        private int points = 0;
-
-        public Person()
-        {
-            firstName = "FN";
-            lastName = "LN";
-
-            Console.WriteLine($"{firstName} {lastName} is Created");
-        }
-
-        public Person(string fn, string ln)
-        {
-            firstName = fn;
-            lastName = ln;
-            Console.WriteLine($"{fn} {ln} is Created");
-        }
-
-        public void addPoint()
-        {
-            points++;
-        }
-
-        public int getPoints()
-        {
-            return points;
-        }
-    }
-}
+using MyCustomClasses;
 
 namespace FirstConsoleProgram
 {
@@ -59,8 +8,8 @@ namespace FirstConsoleProgram
     {
         static void Main(string[] args)
         {
-            TestNameSpace.Person shan = new TestNameSpace.Person();
-            TestNameSpace.Person kannan = new TestNameSpace.Person("kannan", "loganathan");
+            MyCustomClasses.Person shan = new MyCustomClasses.Person();
+            MyCustomClasses.Person kannan = new MyCustomClasses.Person("kannan", "loganathan");
 
             shan.FullName = "Shanthi Kannan";
             Console.WriteLine($"Shanthi's First Name: {shan.firstName}");
