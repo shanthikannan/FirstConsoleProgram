@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirstConsoleProgram
+namespace TestNameSpace
 {
     class Person
     {
@@ -50,13 +50,17 @@ namespace FirstConsoleProgram
             return points;
         }
     }
+}
 
+namespace FirstConsoleProgram
+{
+    
     class Program
     {
         static void Main(string[] args)
         {
-            Person shan = new Person();
-            Person kannan = new Person("kannan", "loganathan");
+            TestNameSpace.Person shan = new TestNameSpace.Person();
+            TestNameSpace.Person kannan = new TestNameSpace.Person("kannan", "loganathan");
 
             shan.FullName = "Shanthi Kannan";
             Console.WriteLine($"Shanthi's First Name: {shan.firstName}");
