@@ -9,6 +9,7 @@ namespace FirstConsoleProgram
         static void Main(string[] args)
         {
             MyCustomClasses.Person shan = new MyCustomClasses.Person();
+
             MyCustomClasses.Person kannan = new MyCustomClasses.Person("kannan", "loganathan");
 
             shan.FullName = "Shanthi Kannan";

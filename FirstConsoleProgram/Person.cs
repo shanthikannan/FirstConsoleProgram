@@ -8,8 +8,10 @@ namespace MyCustomClasses
 {
     class Person
     {
+        private int points = 0;
         public string firstName;
         public string lastName;
+
         public string FullName
         {
             get
@@ -21,9 +23,7 @@ namespace MyCustomClasses
                 lastName = value;
             }
         }
-
         public int age { get; set; }
-        private int points = 0;
 
         public Person()
         {
@@ -41,6 +41,11 @@ namespace MyCustomClasses
         }
 
         public void addPoint()
+        {
+            incrementPoint();
+        }
+
+        private void incrementPoint()
         {
             points++;
         }
